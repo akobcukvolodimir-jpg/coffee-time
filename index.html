@@ -1,8 +1,9 @@
--ласкаво просимо  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
-<title>Кафе "Coffee Time"</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Маргаритка</title>
 
 <style>
 
@@ -13,364 +14,289 @@
 }
 
 body{
-    font-family:Verdana, sans-serif;
-    background:linear-gradient(to right, #1e1e1e, #3b2f2f);
+    font-family: Arial, sans-serif;
+    background:#141414;
     color:white;
 }
 
-.main{
-    width:1200px;
-    margin:20px auto;
-    background:#222;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 0 20px black;
-}
-
+/* HEADER */
 .header{
-    background:url('https://upload.wikimedia.org/wikipedia/commons/6/60/Food_served_at_a_restaurant.jpg');
+    height:420px;
+    background:url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb');
     background-size:cover;
     background-position:center;
-    height:350px;
     position:relative;
 }
 
 .overlay{
-    background:rgba(0,0,0,0.6);
-    height:100%;
+    position:absolute;
     width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
 }
 
 .overlay h1{
     font-size:60px;
-    margin-bottom:20px;
     color:#ffd700;
 }
 
-.overlay p{
-    font-size:22px;
-}
-
+/* MENU */
 .menu{
-    background:#111;
-    padding:20px;
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    background:#0f0f0f;
+    padding:15px;
+    border-bottom:2px solid #ffd700;
 }
 
 .menu a{
-    color:#ffd700;
-    text-decoration:none;
-    margin:20px;
-    font-size:20px;
-    transition:0.3s;
-}
-
-.menu a:hover{
     color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    border:1px solid #ffd700;
+    border-radius:10px;
 }
 
-.content{
-    padding:40px;
-}
-
+/* SECTION */
 .section{
-    margin-bottom:70px;
-    background:#2e2e2e;
-    padding:30px;
-    border-radius:20px;
+    padding:50px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
 h2{
     text-align:center;
-    margin-bottom:25px;
     color:#ffd700;
-    font-size:35px;
+    margin-bottom:25px;
 }
 
-p{
-    line-height:1.8;
-    margin-bottom:20px;
-    font-size:18px;
-}
-
-ul, ol{
-    margin-left:30px;
-    margin-top:15px;
-    margin-bottom:20px;
-    font-size:18px;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-}
-
-table, th, td{
-    border:1px solid #ffd700;
-}
-
-th{
-    background:#ffd700;
-    color:black;
-}
-
-th, td{
-    padding:15px;
-    text-align:center;
-    font-size:17px;
-}
-
+/* CARDS */
 .cards{
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
-    margin-top:30px;
 }
 
 .card{
-    background:#111;
-    width:30%;
-    padding:20px;
+    background:#1f1f1f;
+    padding:15px;
     border-radius:15px;
     text-align:center;
-    box-shadow:0 0 10px black;
 }
 
-.card h3{
-    color:#ffd700;
-    margin-bottom:15px;
+/* PROMO */
+.promo{
+    background:#1f1f1f;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    border-left:4px solid #ffd700;
 }
 
-.footer{
-    background:black;
+/* REVIEWS */
+.review{
+    background:#1f1f1f;
+    padding:10px 15px;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+/* SCHEDULE */
+.schedule{
     text-align:center;
-    padding:25px;
-    font-size:18px;
+    background:#1f1f1f;
+    padding:20px;
+    border-radius:15px;
+    line-height:2;
+}
+
+/* STATUS */
+#status{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:15px;
+    color:#ffd700;
+}
+
+/* CONTACTS */
+.contacts{
+    text-align:center;
+    background:#1f1f1f;
+    padding:20px;
+    border-radius:15px;
+    line-height:2;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:black;
     color:#aaa;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="main">
-
-    <div class="header">
-        <div class="overlay">
-            <h1>Coffee Time</h1>
-            <p>Смак, атмосфера та комфорт в одному місці</p>
-        </div>
+<div class="header">
+    <div class="overlay">
+        <h1>Coffee Маргаритка</h1>
     </div>
+</div>
 
-    <div class="menu">
-        <a href="#home">Головна</a>
-        <a href="#about">Про кафе</a>
-        <a href="#menufood">Меню</a>
-        <a href="#contacts">Контакти</a>
-    </div>
+<div class="menu">
+    <a href="#food">Їжа</a>
+    <a href="#drinks">Напої</a>
+    <a href="#desserts">Десерти</a>
+    <a href="#kids">Дитяче меню</a>
+    <a href="#promo">Акції</a>
+    <a href="#schedule">Графік</a>
+    <a href="#reviews">Відгуки</a>
+    <a href="#contacts">Контакти</a>
+</div>
 
-    <div class="content">
+<!-- FOOD -->
+<div class="section" id="food">
+<h2>🍔 Їжа</h2>
+<div class="cards">
+<div class="card">Піца — 280 грн</div>
+<div class="card">Бургер — 180 грн</div>
+<div class="card">Паста — 220 грн</div>
+</div>
+</div>
 
-        <div class="section" id="home">
+<!-- DRINKS -->
+<div class="section" id="drinks">
+<h2>🥤 Напої</h2>
+<div class="cards">
+<div class="card">Капучино — 90 грн</div>
+<div class="card">Лате — 100 грн</div>
+<div class="card">Мохіто — 150 грн</div>
+</div>
+</div>
 
-            <h2>Ласкаво просимо</h2>
+<!-- DESSERTS -->
+<div class="section" id="desserts">
+<h2>🍰 Десерти</h2>
+<div class="cards">
+<div class="card">Чізкейк — 190 грн</div>
+<div class="card">Тірамісу — 100 грн</div>
+<div class="card">Панкейки — 170 грн</div>
+</div>
+</div>
 
-            <p>
-                Coffee Time — це сучасне кафе у центрі міста,
-                де можна насолодитися ароматною кавою,
-                смачними стравами та приємною атмосферою.
-            </p>
+<!-- KIDS -->
+<div class="section" id="kids">
+<h2>🍭 Дитяче меню</h2>
+<div class="cards">
+<div class="card">Міні-піца — 120 грн</div>
+<div class="card">Коктейль — 90 грн</div>
+<div class="card">Морозиво — 85 грн</div>
+<div class="card">Панкейки — 110 грн</div>
+<div class="card">Сік + печиво — 70 грн</div>
+</div>
+</div>
 
-            <div class="cards">
+<!-- PROMO -->
+<div class="section" id="promo">
 
-                <div class="card">
-                    <h3>☕ Кава</h3>
-                    <p>Натуральна кава з найкращих зерен.</p>
-                </div>
+<h2>🔥 Спеціальні пропозиції</h2>
 
-                <div class="card">
-                    <h3>🍔 Їжа</h3>
-                    <p>Смачні страви європейської та української кухні.</p>
-                </div>
+<div class="cards">
 
-                <div class="card">
-                    <h3>🍰 Десерти</h3>
-                    <p>Солодощі, які піднімають настрій.</p>
-                </div>
+<div class="card">
+<h3>☕ Ранкова кава</h3>
+<p>Капучино + круасан — 129 грн</p>
+</div>
 
-            </div>
+<div class="card">
+<h3>🍕 Комбо вечора</h3>
+<p>Піца + 2 напої — -20%</p>
+</div>
 
-        </div>
-
-        <div class="section" id="about">
-
-            <h2>Про кафе</h2>
-
-            <p>
-                Наше кафе працює більше 10 років.
-                Ми створили місце, де кожен гість
-                може відчути домашній комфорт.
-            </p>
-
-            <h3>Наші переваги</h3>
-
-            <ul>
-                <li>Сучасний інтер’єр</li>
-                <li>Якісне обслуговування</li>
-                <li>Доступні ціни</li>
-                <li>Безкоштовний Wi-Fi</li>
-            </ul>
-
-            <h3>Графік роботи</h3>
-
-            <ol>
-                <li>Понеділок – П’ятниця: 08:00 – 23:00</li>
-                <li>Субота: 09:00 – 20:00</li>
-                <li>Неділя: Вихідний</li>
-            </ol>
-
-        </div>
-
-        <div class="section" id="menufood">
-
-            <h2>Меню</h2>
-
-            <table>
-                <tr>
-                    <th>Страва</th>
-                    <th>Ціна</th>
-                </tr>
-
-                <tr>
-                    <td>Піца Маргарита</td>
-                    <td>280 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Бургер класичний</td>
-                    <td>180 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Салат Цезар</td>
-                    <td>200 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Паста Карбонара</td>
-                    <td>210 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Курячий стейк</td>
-                    <td>230 грн</td>
-                </tr>
-
-            </table>
-
-            <h2 style="margin-top:40px;">Напої</h2>
-
-            <table>
-                <tr>
-                    <th>Напій</th>
-                    <th>Ціна</th>
-                </tr>
-
-                <tr>
-                    <td>Еспресо</td>
-                    <td>65 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Капучино</td>
-                    <td>90 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Лате</td>
-                    <td>100 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Мохіто</td>
-                    <td>95 грн</td>
-                </tr>
-            </table>
-
-            <h2 style="margin-top:40px;">Десерти</h2>
-
-            <table>
-                <tr>
-                    <th>Десерт</th>
-                    <th>Ціна</th>
-                </tr>
-
-                <tr>
-                    <td>Чізкейк</td>
-                    <td>190 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Тірамісу</td>
-                    <td>100 грн</td>
-                </tr>
-
-                <tr>
-                    <td>Шоколадний фондан</td>
-                    <td>250грн</td>
-                </tr>
-
-                <tr>
-                    <td>Морозиво</td>
-                    <td>85грн</td>
-                </tr>
-            </table>
-
-        </div>
-
-        <div class="section" id="contacts">
-
-            <h2>Контакти</h2>
-
-            <table>
-
-                <tr>
-                    <th>Інформація</th>
-                    <th>Дані</th>
-                </tr>
-
-                <tr>
-                    <td>Адреса</td>
-                    <td>м. Вінниця, вул. Центральна, 1А</td>
-                </tr>
-
-                <tr>
-                    <td>Телефон</td>
-                    <td>+380981131464 </td>
-                </tr>
-
-                <tr>
-                    <td>Email</td>
-                    <td>coffeetime@gmail.com</td>
-                </tr>
-
-            </table>
-
-        </div>
-
-    </div>
-
-    <div class="footer">
-        © 2026 Coffee Time | Всі права захищені
-    </div>
+<div class="card">
+<h3>🍰 Десерт дня</h3>
+<p>Щодня новий десерт</p>
+</div>
 
 </div>
 
+</div>
+
+<!-- SCHEDULE -->
+<div class="section" id="schedule">
+
+<h2>📊 Графік роботи</h2>
+
+<div class="schedule">
+Понеділок – Субота → 08:00 - 23:00<br>
+Неділя → Вихідний
+</div>
+
+<div id="status"></div>
+
+</div>
+
+<!-- REVIEWS -->
+<div class="section" id="reviews">
+
+<h2>⭐ Відгуки</h2>
+
+<div class="review">⭐⭐⭐⭐⭐ Дуже смачно!</div>
+<div class="review">⭐⭐⭐⭐⭐ Атмосфера супер!</div>
+<div class="review">⭐⭐⭐⭐⭐ Рекомендую!</div>
+<div class="review">⭐⭐⭐⭐⭐ Швидке обслуговування!</div>
+<div class="review">⭐⭐⭐⭐⭐ Найкраще кафе!</div>
+
+</div>
+
+<!-- CONTACTS -->
+<div class="section" id="contacts">
+
+<h2>📞 Контакти</h2>
+
+<div class="contacts">
+📍 Вінниця<br>
+📞 +380981131464<br>
+📧 coffee@gmail.com
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Coffee Маргаритка
+</div>
+
+<script>
+function checkStatus(){
+    const now = new Date();
+    const day = now.getDay();
+    const hour = now.getHours();
+
+    let text = "";
+
+    if(day === 0){
+        text = "🔴 Сьогодні вихідний";
+    } else if(hour >= 8 && hour < 23){
+        text = "🟢 ЗАРАЗ ВІДКРИТО";
+    } else {
+        text = "🔴 ЗАРАЗ ЗАКРИТО";
+    }
+
+    document.getElementById("status").innerText = text;
+}
+
+checkStatus();
+setInterval(checkStatus, 60000);
+</script>
+
 </body>
+</html>
